@@ -1,0 +1,31 @@
+.terminal-page {
+  padding-bottom: 50px;
+}
+
+.terminal-page .card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.terminal-page .card-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  padding: 15px 20px;
+}
+
+.terminal-page .card-header h5 {
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+.terminal-page .card-body {
+  padding: 20px;
+}
+
+.terminal-page code {
+  background-color: #f1f1f1;
+  padding: 2px 5px;
+  border-radius: 3px;
+  color: #d63384;
+  font-size: 0.9em;
+} 

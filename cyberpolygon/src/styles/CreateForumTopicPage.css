@@ -1,0 +1,158 @@
+.create-forum-topic-page {
+  min-height: calc(100vh - 200px);
+}
+
+.topic-form-tabs {
+  margin-bottom: 2rem;
+}
+
+.markdown-tips {
+  background-color: #f8f9fa;
+  border-radius: 0.375rem;
+  padding: 1rem;
+}
+
+.markdown-tips summary {
+  cursor: pointer;
+  font-weight: 500;
+  color: #495057;
+}
+
+.markdown-tips-content {
+  margin-top: 1rem;
+}
+
+.preview-container {
+  margin-bottom: 1.5rem;
+}
+
+.markdown-preview {
+  min-height: 300px;
+}
+
+.markdown-preview p:last-child {
+  margin-bottom: 0;
+}
+
+/* Стили для Markdown-содержимого */
+.markdown-preview h1,
+.markdown-preview h2,
+.markdown-preview h3,
+.markdown-preview h4,
+.markdown-preview h5,
+.markdown-preview h6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.markdown-preview h1 {
+  font-size: 2rem;
+}
+
+.markdown-preview h2 {
+  font-size: 1.75rem;
+}
+
+.markdown-preview h3 {
+  font-size: 1.5rem;
+}
+
+.markdown-preview h4 {
+  font-size: 1.25rem;
+}
+
+.markdown-preview h5 {
+  font-size: 1.1rem;
+}
+
+.markdown-preview h6 {
+  font-size: 1rem;
+}
+
+.markdown-preview p {
+  margin-bottom: 1rem;
+}
+
+.markdown-preview ul,
+.markdown-preview ol {
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+}
+
+.markdown-preview li {
+  margin-bottom: 0.5rem;
+}
+
+.markdown-preview a {
+  color: #0d6efd;
+  text-decoration: none;
+}
+
+.markdown-preview a:hover {
+  text-decoration: underline;
+}
+
+.markdown-preview blockquote {
+  border-left: 4px solid #dee2e6;
+  padding-left: 1rem;
+  color: #6c757d;
+  margin: 1rem 0;
+}
+
+.markdown-preview code {
+  background-color: #f8f9fa;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.2rem;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.875em;
+}
+
+.markdown-preview pre {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 0.375rem;
+  margin-bottom: 1rem;
+  overflow-x: auto;
+}
+
+.markdown-preview pre code {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+  display: block;
+}
+
+.markdown-preview img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.375rem;
+  margin: 1rem 0;
+}
+
+.markdown-preview table {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-collapse: collapse;
+}
+
+.markdown-preview table th,
+.markdown-preview table td {
+  padding: 0.5rem;
+  border: 1px solid #dee2e6;
+}
+
+.markdown-preview table th {
+  background-color: #f8f9fa;
+}
+
+/* Адаптивная верстка */
+@media (max-width: 768px) {
+  .d-flex.justify-content-between {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .d-flex.justify-content-between button {
+    width: 100%;
+  }
+} 

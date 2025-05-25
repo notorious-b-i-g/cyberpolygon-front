@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    # Убираем тома для лучшей работы npm install
+    # volumes:
+    #   - ./cyberpolygon/src:/app/src
+    #   - ./cyberpolygon/public:/app/public
+    environment:
+      - REACT_APP_API_URL=http://localhost:3001/api
+      - REACT_APP_API_PATH=/cyberpolygon/api
+      - REACT_APP_API_VERSION=/v1
+      - REACT_APP_WS_PATH=/ws
+      - NODE_ENV=development
+      - BROWSER=none
+      - CHOKIDAR_USEPOLLING=true
+      - CI=true
+    restart: on-failure
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:80"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    stdin_open: true
+    tty: true
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge 

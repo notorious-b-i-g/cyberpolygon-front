@@ -1,0 +1,56 @@
+.terminal-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.terminal-window {
+  width: 100%;
+  height: 400px;
+  background-color: #1e1e1e;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.vagrant-btn button {
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.vagrant-btn button:hover {
+  background-color: #0b5ed7;
+}
+
+.vagrant-btn#stop button {
+  background-color: #dc3545;
+}
+
+.vagrant-btn#stop button:hover {
+  background-color: #bb2d3b;
+}
+
+.vagrant-btn#reload button {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.vagrant-btn#reload button:hover {
+  background-color: #ffca2c;
+}
+
+.status {
+  margin-top: 10px;
+  font-weight: 500;
+} 

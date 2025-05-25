@@ -1,0 +1,21 @@
+FROM node:18-alpine
+
+WORKDIR /app
+
+COPY ./cyberpolygon/package*.json ./
+
+RUN npm install
+
+COPY ./cyberpolygon .
+
+RUN chmod -R 755 node_modules/.bin
+
+ENV REACT_APP_API_URL=http://localhost:8000
+ENV REACT_APP_API_PATH=/cyberpolygon/api
+ENV REACT_APP_API_VERSION=/v1
+ENV REACT_APP_WS_PATH=/ws
+ENV BROWSER=none
+
+EXPOSE 3000
+
+CMD ["npm", "start"] 
