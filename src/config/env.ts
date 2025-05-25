@@ -27,7 +27,7 @@ export const API = {
 /** Feature flags */
 export const FEATURES = {
   /** Whether to use mock data instead of real API calls */
-  USE_MOCKS: true,
+  USE_MOCKS: process.env.REACT_APP_USE_MOCKS === 'true',
   
   /** Development mode flag */
   IS_DEV: process.env.NODE_ENV === 'development',
