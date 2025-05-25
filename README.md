@@ -45,6 +45,12 @@ npm run build
 npm test
 ```
 
+Для запуска e2e-тестов используется Cypress:
+
+```bash
+npm run e2e
+```
+
 ## Конфигурация
 
 Создайте файл `.env` в корне проекта:
@@ -63,6 +69,28 @@ REACT_APP_OAUTH_REDIRECT_URI=http://localhost:3000/auth/callback
 REACT_APP_GOOGLE_CLIENT_ID=google-client-id
 REACT_APP_GITHUB_CLIENT_ID=github-client-id
 REACT_APP_YANDEX_CLIENT_ID=yandex-client-id
+```
+
+## Окружения
+
+В репозитории предусмотрены отдельные настройки для разработки и продакшена.
+
+- `.env.development` – переменные для локальной разработки
+- `.env.production` – пример переменных для продакшн окружения
+
+Для работы с Docker также доступны два compose-файла:
+
+- `docker-compose.dev.yml` – запуск приложения в режиме разработки
+- `docker-compose.prod.yml` – сборка и запуск оптимизированной версии
+
+Примеры запуска:
+
+```bash
+# разработка
+docker compose -f docker-compose.dev.yml up --build
+
+# продакшен
+docker compose -f docker-compose.prod.yml up --build
 ```
 
 ## Структура проекта
